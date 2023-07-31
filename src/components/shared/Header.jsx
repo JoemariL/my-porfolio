@@ -25,7 +25,7 @@ const Header = () => {
                         <div>
                             <Link to="/">
                                 {
-                                    <h1 className='text-slate-50 hover:text-yellow-100 font-general-medium text-4xl'>
+                                    <h1 className='text-slate-50 hover:text-indigo-500 font-general-medium text-4xl'>
                                         MyPortfolio
                                     </h1>
                                 }
@@ -88,21 +88,21 @@ const Header = () => {
             <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
                 <Link
                     to="/projects"
-                    className="block text-left text-lg text-slate-50 hover:text-yellow-100 sm:mx-4 mb-2 sm:py-2"
+                    className="block text-left text-lg text-slate-50 hover:text-indigo-500 sm:mx-4 mb-2 sm:py-2"
                     aria-label="Projects"
                 >
                     Projects
                 </Link>
                 <Link
                     to="/about"
-                    className="block text-left text-lg text-slate-50 hover:text-yellow-100 sm:mx-4 mb-2 sm:py-2"
+                    className="block text-left text-lg text-slate-50 hover:text-indigo-500 sm:mx-4 mb-2 sm:py-2"
                     aria-label="About Me"
                 >
                     About Me
                 </Link>
                 <Link
                     to="/contact"
-                    className="block text-left text-lg text-slate-50 hover:text-yellow-100 sm:mx-4 mb-2 sm:py-2"
+                    className="block text-left text-lg text-slate-50 hover:text-indigo-500 sm:mx-4 mb-2 sm:py-2"
                     aria-label="Contact"
                 >
                     Contact
