@@ -27,7 +27,7 @@ const ExperienceTab = ({ logo, companyName, duration, position, type, location, 
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
     return (
-        <div className="border-2 rounded-lg mx-auto mt-5 mb-5 px-3 py-3 w-11/12 lg:w-5/12 ">
+        <div className="border-2 rounded-lg mx-auto mt-5 mb-5 px-3 py-3 w-11/12 lg:w-7/12 ">
             <div onClick={(e) => {
                 e.preventDefault();
                 
