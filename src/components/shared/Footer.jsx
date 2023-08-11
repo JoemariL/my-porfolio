@@ -20,7 +20,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto text-gray-50">
         <div className="pt-6 mt-20 border-t-2 border-slate-50">
             <div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
                 <p className="text-xl text-primary-dark text-slate-50 mb-5">

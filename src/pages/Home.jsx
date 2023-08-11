@@ -4,7 +4,7 @@ import developerIcon from '../images/dev.png';
 
 function Home() {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto text-gray-50">
             <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -20,7 +20,7 @@ function Home() {
                             duration: 0.9,
                             delay: 0.3,
                         }}
-                        className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-slate-50 uppercase"
+                        className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left  uppercase"
                     >
                         Hello, I am Joemari
                     </motion.h1>
@@ -32,7 +32,7 @@ function Home() {
                             duration: 0.9,
                             delay: 0.6,
                         }}
-                        className="text-slate-50 font-general-medium 
+                        className=" font-general-medium 
                         mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center 
                         sm:text-left leading-normal"
                     >
