@@ -1,4 +1,6 @@
 import React from "react";
+import { FiMapPin } from "react-icons/fi";
+import { BsBriefcase } from "react-icons/bs";
 
 import {
     Accordion,
@@ -21,33 +23,43 @@ function Icon({ id, open }) {
     );
 }
 
-const ExperienceTab = ({ logo, companyName, duration, position, type, location, description, onClickFunction, accordionContent }) => {
+const ExperienceTab = ({ logo, companyName, duration, position, type, location, description, onClickFunction, accordionContent, children, ...rest }) => {
 
     const [open, setOpen] = React.useState(0);
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
     return (
-        <div className="border-2 rounded-lg mx-auto mt-5 mb-5 px-3 py-3 w-11/12 lg:w-7/12 ">
+        <div className="border-2 rounded-lg mx-auto mt-5 mb-5 px-3 py-3 w-11/12 lg:w-7/12" {...rest}>
             <div onClick={(e) => {
                 e.preventDefault();
                 
             }}
             className="
-            grid sm:px-5 sm:py-5 sm:flex
-            ">
-                <img
-                    src={logo}
-                    className="h-32 w-32 mx-auto"
-                    alt={"company-logo"}
-                />
-                <div>
+            grid sm:px-5 sm:py-5 sm:flex sm:flex-row
+            ">  
+                <div className="sm:basis-1/4 my-auto mx-auto justify-center items-center object-center">
+                    <img
+                        src={logo}
+                        className="object-contain object-center mx-auto my-auto justify-center items-center"
+                        alt={"company-logo"}
+                    />
+                </div>
+                <div className="
+                sm:ml-3 text-center sm:text-left sm:basis-3/4
+                ">
                     <p className="text-3xl sm:text-4xl pb-1">{companyName}</p>
-                    <p className="pb-2">
-                        {duration} 
-                        <br /><i>{position} - {type}</i>
-                        <br />{location}
-                    </p>
-                    <p className="place-content-start">
+                    <ul className="pb-2 sm:pl-1">
+                        <li className="pb-1"><b>{duration}</b></li> 
+                        <li className="flex">
+                            <i className="mr-1 mt-1"><BsBriefcase /></i>
+                            <i>{position} - {type}</i>
+                        </li>
+                        <li className="flex">
+                            <i className="mr-1 mt-1"><FiMapPin /></i>
+                            <span>{location}</span>
+                        </li>
+                    </ul>
+                    <p className="place-content-start sm:pl-1">
                         {description}
                     </p>
                 </div>
@@ -57,7 +69,7 @@ const ExperienceTab = ({ logo, companyName, duration, position, type, location, 
                 <AccordionHeader className="text-gray-50 text-sm font-mono hover:text-gray-500" 
                 onClick={() => handleOpen(1)}>Click here to see more</AccordionHeader>
                     <AccordionBody className="text-sm text-gray-50">
-                        { accordionContent }
+                        { children }
                     </AccordionBody>
             </Accordion>
         </div>
