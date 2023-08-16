@@ -52,8 +52,8 @@ const About = () => {
 				}}
 				className="mx-auto grid"
 			>
-        <div className="font-general-regular w-full sm:w-3/4 text-left mx-auto my-auto">
-          <hr className="mt-10"></hr>
+        <hr className="mt-10 w-10/12 mx-auto"></hr>
+        <div className="font-general-regular w-full sm:w-3/4 text-left mx-auto my-auto"> 
             <motion.h1 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
