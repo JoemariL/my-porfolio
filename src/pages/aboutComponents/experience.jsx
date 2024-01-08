@@ -44,10 +44,14 @@ const experience = () => {
                         position={"Jr. Systems Engineer | Network Systems"}
                         location={"Makati City, Philippines"}
                         description={
-                        "Setting up, configuring, and troubleshooting network systems especially in WAF and load balancers"
+                        "Responsible for Setup, Configuration, and Troubleshooting of network systems WAF, SIEMs, PacketBroker, Load Balancer"
                         }
                     >
-                        HELLO, Im a wrapper component 1
+                        <ul className="pl-5">
+                            <li>- Setting up, maintenance, and troubleshooting of Cloud Web application Firewalls</li>
+                            <li>- Handling setup, maintenance, and troubleshooting of virtual machines</li>
+                            <li>- Maintenance and troubleshooting of load balancers</li>
+                        </ul>
                     </ExperienceCard>
 
                     <ExperienceCard
@@ -58,10 +62,15 @@ const experience = () => {
                         position={"Full Stack Developer"}
                         location={"Baguio City, Philippines"}
                         description={
-                        "Developed Triage System for staff, students, visitors of the university"
+                        "Developed a web based application for a digitized Health Declaration Form"
                         }
                     >
-                        HELLO, Im a wrapper component 2
+                        <ul className="pl-5">
+                            <li>- Contributed to planning and designing for the Triage System web application</li>
+                            <li>- Developed Back-end using Nodejs, express.js, and MongoDB</li>
+                            <li>- Developed Front-end using React.js and Tailwind CSS</li>
+                            <li>- Deployed web application using NGINX and Virtual Machines</li>
+                        </ul>
                     </ExperienceCard>
 
                 </div>
