@@ -54,6 +54,7 @@ const Header = () => {
                 </div> 
             </div>
 
+            {/* Mobile UI */}
             <div
                 className={
                     showMenu
@@ -76,19 +77,19 @@ const Header = () => {
                     About Me
                 </Link>
                 <Link
-                    to="/contact"
+                    to="/AchievementsAndCerts"
                     className="block text-left text-lg text-gray-50 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-slate-800"
-                    aria-label="Contact"
+                    aria-label="Achievements and Certifications"
                 >
-                    Contact
+                    Achievements and Certifications
                 </Link>
             </div>                    
 
-
+            {/* Desktop UI */}
             <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
                 <Link
                     to="/projects"
-                    className="block text-left text-lg text-gray-50 hover:text-indigo-500 sm:mx-4 mb-2 sm:py-2"
+                    className="block text-left text-lg text-gray-50 hover:text-indigo-500 sm:mx-4 mb-2 sm:py-2 "
                     aria-label="Projects"
                 >
                     Projects
@@ -101,14 +102,13 @@ const Header = () => {
                     About Me
                 </Link>
                 <Link
-                    to="/contact"
+                    to="/AchievementsAndCerts"
                     className="block text-left text-lg text-gray-50 hover:text-indigo-500 sm:mx-4 mb-2 sm:py-2"
-                    aria-label="Contact"
+                    aria-label="Achievements and Certifications"
                 >
-                    Contact
+                    Achievements and Certifications
                 </Link>
             </div>
-
         </div>
     </motion.nav>
     )

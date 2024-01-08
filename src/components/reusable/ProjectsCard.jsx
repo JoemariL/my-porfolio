@@ -19,7 +19,7 @@ const ProjectsCard = ({ projectImage, projectTitle, projectDate, onClickMethod ,
             <img
                 src={projectImage}
                 alt="project-image"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover ml-2"
             />
             </CardHeader>
             <CardBody>

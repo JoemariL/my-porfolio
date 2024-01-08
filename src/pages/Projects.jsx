@@ -17,44 +17,32 @@ const Projects = () => {
 					delay: 0.1,
 				}}
       className="text-center text-4xl lg:mt-10 mt-6">
-        <i>Projects</i>
+        Projects
       </ motion.h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-6 sm:gap-6 gap-6 mb-6 pb-10">
-      
+      <motion.section
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+                className="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-6 mb-6 pb-10"
+            > 
         <ProjectsCard 
           projectImage={projectIcon}
-          projectTitle={"Project-01"}
-          projectDate={"June XXXX - August XXXX"}
+          projectTitle={"SLU Triage System"}
+          projectDate={"January 2022 - June 2022"}
         > 
-          Hello this is a project description
+          A web based application and digitalized the health declaration form.
         </ProjectsCard>
               
         <ProjectsCard 
           projectImage={projectIcon}
-          projectTitle={"Project-01"}
-          projectDate={"June XXXX - August XXXX"}
+          projectTitle={"SLU Ticket Monitoring Distribution System"}
+          projectDate={"August 2021 - December 2021"}
         > 
-          Hello this is a project description
+          A web-based application for the monitoring of the ticket distribution 
+          and remittances conducted by SLU Center of Culture and the Arts.
         </ProjectsCard>
-              
-        <ProjectsCard 
-          projectImage={projectIcon}
-          projectTitle={"Project-01"}
-          projectDate={"June XXXX - August XXXX"}
-        > 
-          Hello this is a project description
-        </ProjectsCard>
-              
-        <ProjectsCard 
-          projectImage={projectIcon}
-          projectTitle={"Project-01"}
-          projectDate={"June XXXX - August XXXX"}
-        > 
-          Hello this is a project description
-        </ProjectsCard>
-
-      </div>
+      </ motion.section>
       
     </div>
   )

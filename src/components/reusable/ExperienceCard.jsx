@@ -23,24 +23,23 @@ function Icon({ id, open }) {
     );
 }
 
-const ExperienceTab = ({ logo, companyName, duration, position, type, location, description, onClickFunction, accordionContent, children, ...rest }) => {
+const ExperienceCard = ({ logo, companyName, duration, position, type, location, description, onClickFunction, accordionContent, children, ...rest }) => {
 
     const [open, setOpen] = React.useState(0);
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
     return (
-        <div className="border-2 rounded-lg mx-auto mt-5 mb-5 px-3 py-3 w-11/12 lg:w-7/12" {...rest}>
+        <div className="rounded-lg mt-2 mb-2 px-3 py-3 grid" {...rest}>
             <div onClick={(e) => {
                 e.preventDefault();
-                
             }}
             className="
-            grid sm:px-5 sm:py-5 sm:flex sm:flex-row
+            grid md:px-5 md:py-5 md:flex md:flex-row row-span-3 h-5/6
             ">  
-                <div className="sm:basis-1/4 my-auto mx-auto justify-center items-center object-center">
+                <div className="sm:basis-1/4 my-auto mx-auto">
                     <img
                         src={logo}
-                        className="object-contain object-center mx-auto my-auto justify-center items-center"
+                        className="object-contain h-40 w-48"
                         alt={"company-logo"}
                     />
                 </div>
@@ -59,21 +58,24 @@ const ExperienceTab = ({ logo, companyName, duration, position, type, location, 
                             <span>{location}</span>
                         </li>
                     </ul>
-                    <p className="place-content-start sm:pl-1">
+                    <p className="place-content-start sm:pl-1 text-left">
                         {description}
                     </p>
                 </div>
             </div>
 
-            <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-                <AccordionHeader className="text-gray-50 text-sm font-mono hover:text-gray-500" 
-                onClick={() => handleOpen(1)}>Click here to see more</AccordionHeader>
-                    <AccordionBody className="text-sm text-gray-50">
-                        { children }
-                    </AccordionBody>
-            </Accordion>
+            <div className="align-bottom h-1/6">
+                <Accordion open={open === 1} icon={<Icon id={1} open={open} className="" />}>
+                    <AccordionHeader className="text-gray-50 text-sm font-mono hover:text-gray-500" 
+                    onClick={() => handleOpen(1)}>Click here to see more</AccordionHeader>
+                        <AccordionBody className="text-sm text-gray-50">
+                            { children }
+                        </AccordionBody>
+                </Accordion>
+            </div>
+
         </div>
     )
 }
 
-export default ExperienceTab;
+export default ExperienceCard;
