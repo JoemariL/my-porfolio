@@ -76,13 +76,13 @@ const Header = () => {
                 >
                     About Me
                 </Link>
-                <Link
+                {/* <Link
                     to="/achievementsAndCerts"
                     className="block text-left text-lg text-gray-50 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-slate-800"
                     aria-label="Achievements and Certifications"
                 >
                     Achievements and Certifications
-                </Link>
+                </Link> */}
             </div>                    
 
             {/* Desktop UI */}
@@ -101,13 +101,13 @@ const Header = () => {
                 >
                     About Me
                 </Link>
-                <Link
+                {/* <Link
                     to="/achievementsAndCerts"
                     className="block text-left text-lg text-gray-50 hover:text-indigo-500 sm:mx-4 mb-2 sm:py-2 hover:underline"
                     aria-label="Achievements and Certifications"
                 >
                     Achievements and Certifications
-                </Link>
+                </Link> */}
             </div>
         </div>
     </motion.nav>

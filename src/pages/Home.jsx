@@ -37,8 +37,8 @@ function Home() {
                         sm:text-left leading-normal"
                     >
                         I am a Software Engineer <br />
-                        and this webpage is under development <br />
-                        version 1.1 😉 
+                        and this is my webpage <br />
+                        Webpage is under Development ⚙ 
                     </motion.p>
                 </div>
             </ motion.section>

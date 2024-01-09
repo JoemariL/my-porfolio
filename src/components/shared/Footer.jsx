@@ -40,6 +40,9 @@ const Footer = () => {
 							</a>
 						))}
 					</ul>
+					<p className='mt-10 text-sm text-slate-50'>
+						Website version 1.1
+					</p>
             </div>
         </div>
     </div>
