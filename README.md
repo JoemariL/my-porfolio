@@ -1,9 +1,15 @@
-## MY PORTFOLIO WEBSITE 
+## My Portfolio Website
+
 <hr>
+
 <p>
   This website holds my profile, projects, and career experiences.
 </p>
+
+<hr>
+
 ## Tools and Technologies
+
 <ul>
   <li>React.Js</li>
   <li>TailwindCSS</li>
@@ -11,4 +17,4 @@
 
 <hr>
 
-### Created by ImYourGhost
+# Created by ImYourGhost
