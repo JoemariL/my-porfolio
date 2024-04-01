@@ -1,4 +1,3 @@
-import './css/App.css';
 import { AnimatePresence } from 'framer-motion';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -14,7 +13,7 @@ const Achievements = lazy(() => import('./pages/Achievements'));
 function App() {
   return (
     <AnimatePresence>
-      <div>
+      <div className='w-full font-body'>
         <Router>
           <Header />
           <Suspense fallback={""}> 

@@ -31,9 +31,9 @@ const contact = () => {
             duration: 1.0,
             delay: 0.4,
             }}
-            className="container mx-auto"
+            className="mx-2 my-5 sm:my-20 sm:mx-5 sm:pl-6"
         >
-            <div className="sm:grid sm:gap-10 mt-10 sm:mt-20 sm:ml-10">
+            <div className="sm:grid sm:gap-5 my-5">
                 <motion.h1
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -42,11 +42,11 @@ const contact = () => {
                     duration: 0.6,
                     delay: 0.1,
                     }}
-                    className="text-center text-4xl"
+                    className="text-center text-4xl mb-5 sm:mb-3 text-amber-200"
                 >
-                    My Contact Details
+                    My Contacts
                 </motion.h1>
-                <ul className="font-general-regular mt-10 md:mt-0">
+                <ul className="font-general-regular">
                     {descriptionData.map((info) => (
                     <li className="flex place-content-center" key={info.id}>
                         <i className="text-2xl mr-1">
@@ -56,8 +56,8 @@ const contact = () => {
                             {info.name}
                         </span>
                     </li>
-				    ))}
-			    </ul>
+                    ))}
+                </ul>
             </div>
         </motion.div>
     </div>

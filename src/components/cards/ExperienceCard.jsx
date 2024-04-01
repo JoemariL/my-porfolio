@@ -29,12 +29,13 @@ const ExperienceCard = ({ logo, companyName, duration, position, type, location,
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
     return (
-        <div className="rounded-lg mt-2 mb-2 px-3 py-3 grid" {...rest}>
+        <div className="rounded-lg p-4 grid border border-gray-900 shadow-xl" 
+        {...rest}>
             <div onClick={(e) => {
                 e.preventDefault();
             }}
             className="
-            grid md:px-5 md:py-5 md:flex md:flex-row row-span-3 h-5/6
+            grid md:p-5 md:flex md:flex-row row-span-3 h-5/6
             ">  
                 <div className="sm:basis-1/4 my-auto mx-auto">
                     <img
@@ -43,9 +44,7 @@ const ExperienceCard = ({ logo, companyName, duration, position, type, location,
                         alt={"company-logo"}
                     />
                 </div>
-                <div className="
-                sm:ml-3 text-center sm:text-left sm:basis-3/4
-                ">
+                <div className="sm:ml-3 text-center sm:text-left sm:basis-3/4">
                     <p className="text-3xl sm:text-4xl pb-1">{companyName}</p>
                     <ul className="pb-2 sm:pl-1">
                         <li className="pb-1"><b>{duration}</b></li> 
@@ -64,14 +63,8 @@ const ExperienceCard = ({ logo, companyName, duration, position, type, location,
                 </div>
             </div>
 
-            <div className="align-bottom h-1/6">
-                <Accordion open={open === 1} icon={<Icon id={1} open={open} className="" />}>
-                    <AccordionHeader className="text-gray-50 text-sm font-mono hover:text-gray-500" 
-                    onClick={() => handleOpen(1)}>Click here to see more</AccordionHeader>
-                        <AccordionBody className="text-sm text-gray-50">
-                            { children }
-                        </AccordionBody>
-                </Accordion>
+            <div className="mt-5 sm:mt-2 text-left">
+                {children}
             </div>
 
         </div>

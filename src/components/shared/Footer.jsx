@@ -20,11 +20,11 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <div className="container mx-auto text-gray-50">
-        <div className="pt-6 mt-20 border-t-2 border-slate-50">
+    <div className="mx-auto text-gray-100">
+        <div className="pt-5 mt-2 border-t border-gray-900 mx-1">
             <div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
-                <p className="text-xl text-primary-dark text-slate-50 mb-5">
-                    For more, follow me on these links
+                <p className="text-xl text-primary-dark text-slate-100 mb-5">
+                    Follow me
                 </p>
                 <ul className="flex gap-4 sm:gap-8">
 						{socialLinks.map((link) => (
@@ -32,7 +32,7 @@ const Footer = () => {
 								href={link.url}
 								target="__blank"
 								key={link.id}
-								className="text-gray-400 hover:text-indigo-500 cursor-pointer rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm p-4 duration-300"
+								className="text-gray-100 hover:text-blue-gray-800 cursor-pointer rounded-lg bg-black shadow-sm p-4 duration-300"
 							>
 								<i className="text-xl sm:text-2xl md:text-3xl">
 									{link.icon}
@@ -40,9 +40,11 @@ const Footer = () => {
 							</a>
 						))}
 					</ul>
-					<p className='mt-10 text-sm text-slate-50'>
-						Website version 1.1
-					</p>
+					<div className='text-center mt-5 text-md sm:text-xl text-gray-100'>
+						<p className='font-regular'>Website version 1.0</p>
+						<p className='text-sm'>Powered by React.js</p>
+					</div>
+
             </div>
         </div>
     </div>

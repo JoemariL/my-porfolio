@@ -11,7 +11,8 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-
+        'background-primary': '#0C0C0C',
+        'background-secondary': '#31363F'
       },
       container: {
 				padding: {
@@ -21,6 +22,9 @@ module.exports = withMT({
 					xl: '6rem',
 					'2xl': '8rem',
 				},
+      },
+      fontFamily: {
+        body: ['Kanit']
       }
     },
   },
