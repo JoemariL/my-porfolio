@@ -9,7 +9,7 @@ function Home() {
             transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
             className="text-gray-100"
         > 
-        <div className='grid grid-rows gap-y-5 sm:grid-cols-2 min-h-[50vh]'>
+        <div className='grid grid-rows gap-y-5 sm:grid-cols-1 min-h-[50vh]'>
                 <div className='p-4 rounded-xl mx-auto my-auto'>
                     <motion.h1
                         initial={{ opacity: 0 }}
@@ -25,6 +25,7 @@ function Home() {
                             text-center capitalize
                             text-nowrap
                             text-blue-gray-200
+                            sm:mt-20
                         "
                         >
                         joemari lopez
@@ -41,7 +42,7 @@ function Home() {
                         className="
                             font-general
                             mt-1 text-3xl text-center 
-                            sm:text-left sm:pl-1 leading-normal
+                            sm:pl-1 leading-normal
                             text-brown-100
                         "
                     >
@@ -49,8 +50,8 @@ function Home() {
                     </motion.p>
                 </div>
 
-                <div className='p-4 rounded-xl mx-auto my-auto text-md sm:text-2xl text-center sm:text-left text-light-green-200'>
-                    <p>
+                <div className='sm:mt-20 p-4 rounded-xl mx-auto my-auto text-md sm:text-2xl text-center '>
+                    <p className='text-light-green-200'>
                         An enthusiastic and self-motivated programmer, 
                         dedicated to continuous growth, 
                         seeking to for new experiences to improve the skills.

@@ -22,7 +22,7 @@ const Header = () => {
                             <Link to="/">
                                 {
                                     <h1 className='text-4xl sm:text-5xl hover:text-blue-gray-800 text-yellow-300'>
-                                        Joe Portfolio
+                                        J Portfolio
                                     </h1>
                                 }
                             </Link>
@@ -83,13 +83,13 @@ const Header = () => {
             <div className="font-general-medium hidden text-xl m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex sm:space-x-5 p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
                 <Link
                     to="/projects"
-                    className="block text-left pl-1 text-gray-100 sm:px-5 sm:p-2 hover:text-blue-gray-800 hover:bg-cyan-500 rounded-3xl"
+                    className="block text-left pl-1 text-gray-100 sm:px-5 sm:p-2 hover:text-blue-gray-800 hover:bg-cyan-100 rounded-xl"
                 >
                     Projects 
                 </Link>
                 <Link
                     to="/about"
-                    className="block text-left pl-1 text-gray-100 sm:px-5 sm:p-2 hover:text-blue-gray-800 hover:bg-cyan-500 rounded-3xl"
+                    className="block text-left pl-1 text-gray-100 sm:px-5 sm:p-2 hover:text-blue-gray-800 hover:bg-cyan-100 rounded-xl"
                 >
                     About Me
                 </Link>
