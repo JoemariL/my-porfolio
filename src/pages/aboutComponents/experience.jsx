@@ -84,9 +84,9 @@ const Experience = () => {
                     </motion.h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mx-auto">
                     {experienceData.map((experience) => (
-                        <div key={experience.id} className="bg-gray-800 rounded-lg shadow-lg p-6">
+                        <div key={experience.id} className="rounded-lg shadow-lg p-6">
                             <ExperienceCard
                                 logo={experience.logo}
                                 companyName={experience.companyName}

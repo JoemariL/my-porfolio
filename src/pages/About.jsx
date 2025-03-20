@@ -9,15 +9,9 @@ import ContactTab from "./aboutComponents/contact";
 const About = () => {
   return (
     <div className="mx-auto place-content-center text-gray-100">
-
       <ProfileTab />
-
       <SkillsTab />
-
       <ExperienceTab />
-
-      <ContactTab />
-
     </div>
   )
 }

@@ -15,7 +15,7 @@ const Header = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full bg-gray-900 text-gray-100 shadow-md px-4 sm:px-20 py-5"
+      className="fixed top-0 left-0 w-full bg-gray-900 text-gray-100 shadow-md px-4 sm:px-20 py-5 z-50"
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
