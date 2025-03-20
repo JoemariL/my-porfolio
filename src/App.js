@@ -1,6 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/shared/Header.jsx';
 import Footer from './components/shared/Footer.jsx';
@@ -12,20 +12,20 @@ const Achievements = lazy(() => import('./pages/Achievements'));
 
 function App() {
   return (
-    <AnimatePresence>
-      <div className='w-full font-body'>
-        <Router>
-          <Header />
-          <Suspense fallback={""}> 
+    <AnimatePresence mode="wait">
+      <div className='w-full font-body flex flex-col min-h-screen'> 
+        <Header />
+        <main className="flex-grow">
+          <Suspense fallback={<div className="text-center py-10 text-yellow-300">Loading...</div>}> 
             <Routes>
-              <Route path="/" element={<Home />}/>
-              <Route path="/About" element={<About />}/>
-              <Route path="/Projects" element={<Projects />}/>
-              <Route path="/AchievementsAndCerts" element={<Achievements />}/>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/achievements" element={<Achievements />} />
             </Routes>
           </Suspense>
-          <Footer />
-        </Router>
+        </main>
+        <Footer />
       </div>
     </AnimatePresence>
   );

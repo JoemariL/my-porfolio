@@ -1,54 +1,58 @@
 import React from 'react';
-
-import {
-	FiGithub,
-	FiLinkedin,
-} from 'react-icons/fi';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const socialLinks = [
-	{
-		id: 1,
-		icon: <FiGithub />,
-		url: 'https://github.com/JoemariL/',
-	},
-	{
-		id: 2,
-		icon: <FiLinkedin />,
-		url: 'https://www.linkedin.com/in/joemari-lopez-95409423a/',
-	},
+  {
+    id: 1,
+    icon: <FiGithub />,
+    url: 'https://github.com/JoemariL/',
+  },
+  {
+    id: 2,
+    icon: <FiLinkedin />,
+    url: 'https://www.linkedin.com/in/joemari-lopez-95409423a/',
+  },
 ];
 
 const Footer = () => {
   return (
-    <div className="mx-auto text-gray-100">
-        <div className="pt-5 mt-2 border-t border-gray-900 mx-1">
-            <div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
-                <p className="text-xl text-primary-dark text-slate-100 mb-5">
-                    Follow me
-                </p>
-                <ul className="flex gap-4 sm:gap-8">
-						{socialLinks.map((link) => (
-							<a
-								href={link.url}
-								target="__blank"
-								key={link.id}
-								className="text-gray-100 hover:text-blue-gray-800 cursor-pointer rounded-lg bg-black shadow-sm p-4 duration-300"
-							>
-								<i className="text-xl sm:text-2xl md:text-3xl">
-									{link.icon}
-								</i>
-							</a>
-						))}
-					</ul>
-					<div className='text-center mt-5 text-md sm:text-xl text-gray-100'>
-						<p className='font-regular'>Website version 1.0</p>
-						<p className='text-sm'>Powered by React.js</p>
-					</div>
+    <motion.footer 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: 'easeInOut', duration: 0.6 }}
+      className="w-full bg-gray-900 text-gray-100 py-10 border-t border-gray-800"
+    >
+      <div className="max-w-5xl mx-auto text-center">
+        {/* Follow Me Section */}
+        <h3 className="text-lg sm:text-2xl text-amber-300 font-semibold mb-5">
+          Follow me
+        </h3>
 
-            </div>
+        {/* Social Icons */}
+        <ul className="flex justify-center gap-6">
+          {socialLinks.map((link) => (
+            <motion.a
+              href={link.url}
+              target="__blank"
+              key={link.id}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-gray-100 hover:text-amber-300 cursor-pointer rounded-full bg-gray-800 shadow-md p-4 transition-all"
+            >
+              <i className="text-2xl sm:text-3xl">{link.icon}</i>
+            </motion.a>
+          ))}
+        </ul>
+
+        {/* Footer Info */}
+        <div className="mt-5 text-sm sm:text-md text-gray-400">
+          <p>Website Version 2.0</p>
+          <p className="text-xs">Powered by React.js & TailwindCSS</p>
         </div>
-    </div>
-  )
-}
+      </div>
+    </motion.footer>
+  );
+};
 
 export default Footer;

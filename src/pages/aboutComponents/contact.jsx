@@ -5,22 +5,22 @@ import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
 const descriptionData = [
 	{
 		id: 1,
-		name: 'lopezjoemari1@gmail.com',
+		name: 'lopezjoemari1@gmail.com', // Add your email here
 		icon: <FiMail />,
 	},
 	{
 		id: 2,
-		name: '+63 949 6272 670',
+		name: '+63 949 627 2670', // Add your phone number here
 		icon: <FiPhone />,
 	},
 	{
 		id: 3,
-		name: 'Baguio City, Philippines',
+		name: 'Philippines', // Add your address here
 		icon: <FiMapPin />,
 	},
 ];
 
-const contact = () => {
+const Contact = () => {
   return (
     <div>
         <motion.div
@@ -33,7 +33,7 @@ const contact = () => {
             }}
             className="mx-2 my-5 sm:my-20 sm:mx-5 sm:pl-6"
         >
-            <div className="sm:grid sm:gap-5 my-5">
+            <div className="my-5">
                 <motion.h1
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -42,17 +42,17 @@ const contact = () => {
                     duration: 0.6,
                     delay: 0.1,
                     }}
-                    className="text-center text-4xl mb-5 sm:mb-3 text-amber-200"
+                    className="text-center text-4xl mb-5 sm:mb-10 text-amber-200"
                 >
                     My Contacts
                 </motion.h1>
-                <ul className="font-general-regular">
+                <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 font-general-regular">
                     {descriptionData.map((info) => (
-                    <li className="flex place-content-center" key={info.id}>
-                        <i className="text-2xl mr-1">
+                    <li className="flex flex-col items-center text-center p-4 bg-gray-800 rounded-lg shadow-lg" key={info.id}>
+                        <i className="text-3xl mb-2 text-amber-200">
                             {info.icon}
                         </i>
-                        <span className="text-lg mb-4">
+                        <span className="text-lg text-gray-300">
                             {info.name}
                         </span>
                     </li>
@@ -61,7 +61,7 @@ const contact = () => {
             </div>
         </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default contact;
+export default Contact;

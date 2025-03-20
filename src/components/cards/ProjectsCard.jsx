@@ -1,36 +1,33 @@
-import React, { Children } from "react";
-
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import React from "react";
+import { motion } from "framer-motion";
 
 const ProjectsCard = ({ projectTitle, projectDate, children, ...rest }) => {
-    return (
-        <div className="grid border border-blue-gray-800 p-4 rounded-xl shadow-xl" {...rest}>
-            <div className="font-semibold text-3xl text-center text-amber-200"> 
-                <h1>
-                    {projectTitle} 
-                </h1>
-                
-            </div>
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeInOut", duration: 0.5 }}
+      whileHover={{ scale: 1.05 }}
+      className="border border-gray-700 p-6 rounded-2xl shadow-lg bg-gray-900 text-gray-100 hover:shadow-2xl transition-all"
+      {...rest}
+    >
+      {/* Project Title */}
+      <h1 className="text-2xl font-extrabold text-amber-300 text-center">
+        {projectTitle}
+      </h1>
 
-            <div className="font-light text-xl text-center mt-2"> 
-                {projectDate} 
-            </div>
+      {/* Project Date */}
+      <p className="text-lg text-gray-400 text-center mt-2">{projectDate}</p>
 
-            <div className="text-md mt-10 sm:mt-15 w-full text-left"> 
-                {children} 
-            </div>
+      {/* Project Description */}
+      <p className="text-md text-gray-300 mt-6 leading-relaxed">{children}</p>
 
-            <div className="text-left mt-10 font-extralight">
-                Website url here: 
-            </div>
-        </div>
-    );
+      {/* Project Link (Placeholder) */}
+      <p className="mt-6 text-gray-500 text-sm">
+        <span className="text-gray-400 font-light">Website URL:</span> Coming soon...
+      </p>
+    </motion.div>
+  );
 };
 
 export default ProjectsCard;

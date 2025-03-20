@@ -3,64 +3,55 @@ import { motion } from 'framer-motion';
 
 function Home() {
     return (
-        <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-            className="text-gray-100"
-        > 
-        <div className='grid grid-rows gap-y-5 sm:grid-cols-1 min-h-[50vh]'>
-                <div className='p-4 rounded-xl mx-auto my-auto'>
+        <div className="mx-auto flex flex-col min-h-screen bg-black">
+            <motion.section
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+                className="flex-grow flex items-center justify-center px-4"
+            > 
+                <div className="max-w-4xl text-center">
                     <motion.h1
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                            ease: 'easeInOut',
-                            duration: 0.9,
-                            delay: 0.3,
-                        }}
-                        className="
-                            font-general-semibold text-5xl 
-                            sm:text-left sm:text-8xl
-                            text-center capitalize
-                            text-nowrap
-                            text-blue-gray-200
-                            sm:mt-20
-                        "
-                        >
-                        joemari lopez
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                            ease: 'easeInOut',
-                            duration: 0.9,
-                            delay: 0.6,
-                        }}
-                        className="
-                            font-general
-                            mt-1 text-3xl text-center 
-                            sm:pl-1 leading-normal
-                            text-brown-100
-                        "
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ ease: 'easeInOut', duration: 1, delay: 0.3 }}
+                        className="text-5xl sm:text-7xl font-extrabold text-yellow-300 tracking-wide"
                     >
-                        Developer
+                        Joemari Lopez
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+                        className="mt-4 text-lg sm:text-2xl text-yellow-200"
+                    >
+                        Developer | Network & Security
                     </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ ease: 'easeInOut', duration: 1, delay: 0.8 }}
+                        className="mt-6 text-md sm:text-xl text-yellow-100 max-w-3xl mx-auto leading-relaxed"
+                    >
+                        An enthusiastic and self-motivated programmer, dedicated to continuous growth, seeking new experiences to improve skills.
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ ease: 'easeInOut', duration: 1, delay: 1 }}
+                        className="mt-8"
+                    >
+                        {/* <a
+                            href="#projects"
+                            className="px-6 py-3 bg-yellow-400 text-black text-lg font-medium rounded-lg hover:bg-yellow-500 transition duration-300"
+                        >
+                            View My Work
+                        </a> */}
+                    </motion.div>
                 </div>
-
-                <div className='sm:mt-20 p-4 rounded-xl mx-auto my-auto text-md sm:text-2xl text-center '>
-                    <p className='text-light-green-200'>
-                        An enthusiastic and self-motivated programmer, 
-                        dedicated to continuous growth, 
-                        seeking to for new experiences to improve the skills.
-                    </p>
-                
-                </div>
-            </div>
-        </ motion.section>
-    )
+            </motion.section>
+        </div>
+    );
 }
 
 export default Home;
